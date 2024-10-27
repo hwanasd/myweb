@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+ <html>
+    <head>
+        <title>web1-html</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Loop & Array</h1>
+        <script>
+            var coworkers = ['egoing','lee','kim','park'];
+        </script>
+        <h2>Co workers</h2>
+        <ul>
+            <script>
+                var i = 0;
+                while(i<coworkers.length){
+                    document.write('<li><a href="http://a.com/'+coworkers[i]+'">'+coworkers[i]+'</a></li>')
+                    i=i+1;
+                }
+            </script>
+        </ul>
+
+        <script>
+            document.write('<li>1<li>');
+            var i =0;
+            while(i<3){
+            document.write('<li>2<li>');
+            document.write('<li>3<li>');
+            i=i+1;
+            }
+            document.write('<li>4<li>');
+         
+        </script>
+    </body>
+ </html>

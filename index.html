@@ -8,11 +8,39 @@
        <h1><a href="index.html">web</a></h1>
        <input type="button" value="night" onclick="
        document.querySelector('body').style.backgroundColor='black';
-       document.querySelector('body').style.backgroundColor='white';
+       document.querySelector('body').style.Color='white';
        ">
         <input type="button" value="day" onclick="
         document.querySelector('body').style.backgroundColor='white';
-        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.Color='black';
+        ">
+        <input id="night_day" type="button" value="night" onclick="
+        if (document.querySelector('#night_day').value ==='night')
+        {
+            document.querySelector('body').style.backgroundColor='black';
+            document.querySelector('body').style.Color='white';
+            document.querySelector('#night_day').value ='day'
+            
+            var alist = document.querySelectorAll('a');
+            var i = 0
+            while(i < alist.length){
+            alist[i].style.color = 'powderblue';
+            i = i + 1;
+     }
+    }
+        else {
+            document.querySelector('body').style.backgroundColor='white';
+            document.querySelector('body').style.Color='black';
+            document.querySelector('#night_day').value ='night'
+            
+            var alist = document.querySelectorAll('a');
+            var i = 0
+            while(i < alist.length){
+            alist[i].style.color = 'blue';
+            i = i + 1
+         }
+        }
+        
         ">
        <ol>
            <li><a href="1.html">html</a></li>
@@ -28,6 +56,10 @@
        <p><a href="https://livere.com/">livere</a></p>
        <p>라이브채팅</p>
        <p><a href="https://www.tawk.to/">tawk.to</a></p>
+
+
+
+
        <p><!--Start of Tawk.to Script-->
 <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -42,6 +74,61 @@
     </script>
     <!--End of Tawk.to Script-->
        </p>
+       
+       <input type="button" value="night" onclick="
+        if (this.value ==='night'){
+            document.querySelector('body').style.backgroundColor='black';
+            document.querySelector('body').style.Color='white';
+            this.value ='day'
+        } 
+        else {
+            document.querySelector('body').style.backgroundColor='white';
+            document.querySelector('body').style.Color='black';
+            this.value ='night'
+        }
+        
+        ">
+        
+       <script>
+        function nightdayhandler(self){
+        var target = document.querySelector('body');
+        if (self.value ==='night'){
+            target.style.backgroundColor='black';
+            target.style.Color='white';
+            self.value ='day';
+
+            var alist = document.querySelectorAll('a');
+            var i = 0
+            while(i < alist.length){
+            alist[i].style.color = 'powderblue';
+            i = i + 1;
+            }
+            }
+         
+        else {
+            target.style.backgroundColor='white';
+            target.style.Color='black';
+            self.value ='night'
+
+            var alist = document.querySelectorAll('a');
+            var i = 0
+            while(i < alist.length){
+            alist[i].style.color = 'blue';
+            i = i + 1
+         }
+        }
+    }
+        
+         </script>
+
+
+        <input type="button" value="night" onclick="
+        nightdayhandler(this)">
+
+
+
+
+
 
      </body>
 </html>
